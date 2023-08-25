@@ -1,0 +1,120 @@
+
+<mat-drawer-container class="example-container" >  
+      
+    <mat-grid-list cols="2" >
+    <mat-grid-tile>
+            <section class="mongkol mat-elevation-z8" tabindex="0">
+                <h1 style="text-align: center;">รถเข้า</h1>
+                <table mat-table [dataSource]="reportmodel">
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="Licenpalte number" sticky>
+                        <th mat-header-cell *matHeaderCellDef> Licenpalte number </th>
+                        <td mat-cell *matCellDef="let reportmodel"> {{reportmodel.lpNo}} </td>
+                    </ng-container>
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="Date">
+                        <th mat-header-cell *matHeaderCellDef> Date </th>
+                        <td mat-cell *matCellDef="let reportmodel"> {{reportmodel.lpDate|date: 'dd/MM/yyyy'}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="Time">
+                        <th mat-header-cell *matHeaderCellDef> Time </th>
+                        <td mat-cell *matCellDef="let reportmodel"> {{reportmodel.lpTime|date: ' h:mm a'}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="Brand">
+                        <th mat-header-cell *matHeaderCellDef> Brand </th>
+                        <td mat-cell *matCellDef="let reportmodel"> {{reportmodel.car_Brand}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="Model">
+                        <th mat-header-cell *matHeaderCellDef> Model </th>
+                        <td mat-cell *matCellDef="let reportmodel"> {{reportmodel.car_Model}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="Color">
+                        <th mat-header-cell *matHeaderCellDef> Color </th>
+                        <td mat-cell *matCellDef="let reportmodel"> {{reportmodel.car_Color}} </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </section>
+        
+    </mat-grid-tile>
+
+
+    <mat-grid-tile>
+        
+
+            <section class="mongkol mat-elevation-z8" tabindex="0">
+                <h1 style="text-align: center;">รถออก</h1>
+                <table mat-table [dataSource]="reportmodelOut">
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="Licenpalte number" sticky>
+                        <th mat-header-cell *matHeaderCellDef> Licenpalte number </th>
+                        <td mat-cell *matCellDef="let reportmodelOut"> {{reportmodelOut.lpNo}} </td>
+                    </ng-container>
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="Date">
+                        <th mat-header-cell *matHeaderCellDef> Date </th>
+                        <td mat-cell *matCellDef="let reportmodelOut"> {{reportmodelOut.lpDate|date: 'dd/MM/yyyy'}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="Time">
+                        <th mat-header-cell *matHeaderCellDef> Time </th>
+                        <td mat-cell *matCellDef="let reportmodelOut"> {{reportmodelOut.lpTime|date: ' h:mm a'}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="Brand">
+                        <th mat-header-cell *matHeaderCellDef> Brand </th>
+                        <td mat-cell *matCellDef="let reportmodelOut"> {{reportmodelOut.car_Brand}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="Model">
+                        <th mat-header-cell *matHeaderCellDef> Model </th>
+                        <td mat-cell *matCellDef="let reportmodelOut"> {{reportmodelOut.car_Model}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="Color">
+                        <th mat-header-cell *matHeaderCellDef> Color </th>
+                        <td mat-cell *matCellDef="let reportmodelOut"> {{reportmodelOut.car_Color}} </td>
+                    </ng-container>
+      
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </section>
+
+        
+    </mat-grid-tile>
+</mat-grid-list>
+    
+
+
+
+        <mat-drawer class="example-sidenav" mode="side" opened>
+        
+          <mat-nav-list >
+            <a mat-list-item href="/" >
+              <h2 style="color: #74c9af;" >SoftService</h2>
+                <!-- <img src="https://www.softsquaregroup.com/assets/img/logo.png"  width="25%"   > -->
+            </a>
+            
+            <mat-list>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <button mat-button>{{name}}<mat-icon>supervised_user_circle</mat-icon></button>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </mat-list>
+            
+          </mat-nav-list>
+          <button mat-raised-button (click)="logout()" style="margin-top: 230%; background-color: #c97474;color: rgb(240, 248, 255);">Logout</button>
+      </mat-drawer>
+      </mat-drawer-container>  

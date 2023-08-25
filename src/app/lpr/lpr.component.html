@@ -1,0 +1,66 @@
+
+  <mat-grid-list cols="2" rowHeight="100%">
+    <mat-grid-tile>
+      <div class="con">
+        <h1>รถเข้า</h1>
+        <!-- <img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" width="80%" > -->
+        <!-- <img src="http://localhost:5000/video" width="80%"> -->
+        <img src="/assets/image/123.png" width="80%">
+        <mat-table [dataSource]="lprmodel" class="mat-elevation-z8">
+          <!-- Licenseplate Column -->
+          <ng-container matColumnDef="Licenseplate">
+            <mat-header-cell *matHeaderCellDef> Licenseplate </mat-header-cell>
+            <mat-cell *matCellDef="let lprmodel"> {{lprmodel.licen_plates}} </mat-cell>
+          </ng-container>
+  
+          <!-- Date Column -->
+          <ng-container matColumnDef="Date">
+            <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+            <mat-cell *matCellDef="let lprmodel"> {{lprmodel.lpDate|date: ' dd/MM/yyyy'}} </mat-cell>
+          </ng-container>
+  
+          <!-- Time Column -->
+          <ng-container matColumnDef="Time">
+            <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+            <mat-cell *matCellDef="let lprmodel"> {{lprmodel.lpTime|date: ' h:mm a '}} </mat-cell>
+          </ng-container>
+  
+          <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+    </mat-grid-tile>
+  
+  
+    <mat-grid-tile>
+      <div class="con">
+        <h1>รถออก</h1>
+        <!-- <img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" width="80%" > -->
+        <!-- <img src="http://localhost:5000/video" width="80%"> -->
+        <img src="assets/image/456.png" width="80%">
+        <mat-table [dataSource]="lprmodelOut" class="mat-elevation-z8">
+          <!-- Licenseplate Column -->
+          <ng-container matColumnDef="Licenseplate">
+            <mat-header-cell *matHeaderCellDef> Licenseplate </mat-header-cell>
+            <mat-cell *matCellDef="let lprmodel"> {{lprmodel.licen_plates}} </mat-cell>
+          </ng-container>
+  
+          <!-- Date Column -->
+          <ng-container matColumnDef="Date">
+            <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+            <mat-cell *matCellDef="let lprmodel"> {{lprmodel.lpDate|date: ' dd/MM/yyyy'}} </mat-cell>
+          </ng-container>
+  
+          <!-- Time Column -->
+          <ng-container matColumnDef="Time">
+            <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+            <mat-cell *matCellDef="let lprmodel"> {{lprmodel.lpTime|date: ' h:mm a '}} </mat-cell>
+          </ng-container>
+  
+          <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+

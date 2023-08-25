@@ -1,0 +1,74 @@
+<h2 mat-dialog-title style="color: #74c9af;">Employee Details</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="empForm">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Employee code</mat-label>
+            <input matInput  formControlName="emp_Code">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput  formControlName="emp_Name">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Last name</mat-label>
+            <input matInput  formControlName="emp_last_Name">
+          </mat-form-field></td>
+      </tr>
+    </table>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="pass">
+          </mat-form-field></td>
+      </tr>
+    </table>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Phone</mat-label>
+            <input matInput  formControlName="emp_Phone">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Job title</mat-label>
+            <input matInput  formControlName="emp_job_Title">
+          </mat-form-field></td>
+      </tr>
+    </table>
+  </form>
+</mat-dialog-content>
+<h2 mat-dialog-title style="color: #74c9af;">Car Details</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="empForm">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>License plate number</mat-label>
+            <input matInput  formControlName="car_Licenseplate">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Brand</mat-label>
+            <input matInput  formControlName="car_Brand">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Model</mat-label>
+            <input matInput  formControlName="car_Model">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Color</mat-label>
+            <input matInput  formControlName="car_Color">
+          </mat-form-field></td>
+      </tr>
+    </table>
+  </form>
+</mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close style="background-color: #e74b60;color: rgb(255, 255, 255);">Cancel</button>
+    <button mat-button style="background-color: #6eb3f5;color: rgb(250, 250, 250);" (click)="save()">Save</button>
+  </mat-dialog-actions>

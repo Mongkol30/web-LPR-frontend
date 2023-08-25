@@ -1,0 +1,70 @@
+
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">
+      <div class="input-group mb-3" style="margin-top: 6%;">
+        <input placeholder="Search" class="form-control" [(ngModel)]="text" >
+        <button class="btn btn-outline-secondary" style="color: #74c9af;" (click)="search()"><i class="bi bi-search"></i></button>
+      </div>
+    </a>
+    <div class=" d-flex">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button mat-raised-button color="primary" style="background-color: #74c9af;" (click)="addMember()">Add User<mat-icon>person_add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container mt-2">
+  <table mat-table [dataSource]="membermodel" class="mat-elevation-z8">
+    <ng-container matColumnDef="Empolyee code">
+      <mat-header-cell *matHeaderCellDef> Empolyee code </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.emp_Code}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.emp_Name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Lastname">
+      <mat-header-cell *matHeaderCellDef> Lastname </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.emp_last_Name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Job title">
+      <mat-header-cell *matHeaderCellDef> Job title </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.emp_job_Title}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Phone">
+      <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.emp_Phone}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Licenseplate">
+      <mat-header-cell *matHeaderCellDef> Licenseplate </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.car_Licenseplate}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Brand">
+      <mat-header-cell *matHeaderCellDef> Brand </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.car_Brand}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Color">
+      <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel"> {{membermodel.car_Color}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Action">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let membermodel">
+        <div class="btn-group btn-group-sm"  >
+          <button type="button" class="btn " style="background-color: #6eb3f5;color: aliceblue;" (click)="editMember(membermodel.car_Licenseplate)"><i class="bi bi-pencil-square"></i>    </button>
+          <button type="button" class="btn " style="background-color: #e74b60;color: aliceblue;" (click)="deleteMember(membermodel.emp_Code,membermodel.cd_Id)"><i class="bi bi-trash"></i>    </button>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </table>
+</div>
+
+
+ 
+

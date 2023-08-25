@@ -1,0 +1,18 @@
+
+<mat-drawer-container class="example-container" >
+<router-outlet></router-outlet> 
+  
+    <mat-drawer class="example-sidenav" mode="side" opened>
+    
+      <mat-nav-list >
+        <a mat-list-item href="/" >
+          <h2 style="color: #74c9af;" >SoftService</h2>
+            <!-- <img src="https://www.softsquaregroup.com/assets/img/logo.png"  width="25%"   > -->
+        </a>
+        <a mat-list-item href="admin/lpr" >LPR</a>
+        <a mat-list-item href="admin/member" >Member</a>
+        <a mat-list-item href="admin/report" >Report</a>
+      </mat-nav-list>
+      <button mat-raised-button (click)="logout()" style="margin-top: 230%; background-color: #c97474;color: rgb(240, 248, 255);">Logout</button>
+  </mat-drawer>
+  </mat-drawer-container>  

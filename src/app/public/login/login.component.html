@@ -1,0 +1,12 @@
+<div class="container" [formGroup]="form">
+
+    <img src="https://www.softsquaregroup.com/assets/img/logo.png"  width="10%"   >
+    <h1>Soft Service</h1>
+    
+
+    <input type="text" formControlName="username" placeholder="Username">
+    <input type="password" formControlName="password" placeholder="Password">
+
+    <button (click)="login()" >Login</button>
+    
+</div>
