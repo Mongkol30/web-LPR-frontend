@@ -8,4 +8,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### เว็บไซต์แสดงระบบตรวจจับทะเบียนรถ
 โดย repository เป็นส่วนของ frontend
 
-![โลโก้เท่ๆ](.src/assets/project/er.png)
+![](src/assets/project/er.png)
