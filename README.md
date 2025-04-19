@@ -6,3 +6,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 โปรเจกต์นี้เป็นส่วนหนึ่งของปริญญานิพนธ์ตามหลักสูตรวิศวกรรมศาสตร์บัณทิต
 
 ### เว็บไซต์แสดงระบบตรวจจับทะเบียนรถ
+โดย repository เป็นส่วนของ frontend
